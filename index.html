@@ -1,0 +1,72 @@
+<html>  
+<head>  
+    <title>Note Keeper</title>  
+    <link rel = "stylesheet"  href = "style.css">  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+
+
+</head>  
+<body>  
+    
+    
+   
+
+         <!-- <h1 class="logina">Login</h1>    -->
+        <br>
+        <form name="f1" action = "auth.php" onsubmit = "return validation()" method = "POST"> 
+            <div class="tot"> 
+           <div class="creds">
+            <p> 
+
+
+                <label> UserName: </label>  
+                <input type = "text" id ="user" name  = "user" />  
+            </p>  
+            
+            <p>  
+                <label> Password: </label>  
+                <input type = "password" id ="pass" name  = "pass" />  
+            </p>  
+        </div>
+            <br>
+            <p>     
+                <input type =  "submit" id = "btn" value = "Login" />  
+                <input type =  "submit" id = "btn" value = "Sign Up" onclick="open_win()"/>  
+
+            </p>  
+        </form>  
+        </div>
+    </div>  
+
+
+    <script>  
+            function validation()  
+            {  
+                var id=document.f1.user.value;  
+                var ps=document.f1.pass.value;  
+                if(id.length=="" && ps.length=="") {  
+                    alert("User Name and Password fields are empty");  
+                    return false;  
+                }  
+                
+                else  
+                {  
+                    if(id.length=="") {  
+                        alert("User Name is empty");  
+                        return false;  
+                    }   
+                    if (ps.length=="") {  
+                    alert("Password field is empty");  
+                    return false;  
+                    }  
+                }                             
+            }  
+            function open_win() {
+           window.open("register.php")
+      }
+        </script>  
+        
+</body>     
+</html> 
